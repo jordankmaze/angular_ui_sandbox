@@ -1,0 +1,143 @@
+﻿<div class="col-md-10">
+    <form name="procedureSearchCriteriaForm">
+        <div id="overlay">
+            <div class="row">
+                <div class="page-header">
+                    <h3>{{ vm.title }}</h3>
+                </div>
+                <p>1. Enter search criteria in one or more of the following fields.</p>
+            </div>
+
+            <div id="searchBoxes" class="row" ng-show="vm.advancedSearch">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Procedure ID</th>
+                            <th>Procedure Type</th>
+                            <th>Work Type</th>
+                            <th>Department</th>
+                            <th>Cost Center</th>
+                            <th>Step</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" class="form-control" placeholder="ALL" ng-model="vm.searchObject.procedureId"></td>
+                            <td>
+                                <select class="form-control" name="procedureTypeSelect" id="procedureTypeSelect" ng-model="vm.searchObject.procedureTypeId">
+                                    <option value="">--Select--</option>
+                                    <option ng-repeat="type in vm.procedureTypes" value="{{ type.id }}">{{ type.description }}</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="form-control" name="workTypeSelect" id="workTypeSelect" ng-model="vm.searchObject.workTypeId">
+                                    <option value="">--Select--</option>
+                                    <option ng-repeat="type in vm.workTypes" value="{{ type.id }}">{{ type.description }}</option>
+                                </select>
+                            </td>
+                            <td><input type="text" class="form-control" placeholder="ALL"></td>
+                            <td><input type="text" class="form-control" placeholder="ALL" ng-model="vm.searchObject.department"></td>
+                            <td><input type="text" class="form-control" placeholder="ALL" ng-model="vm.searchObject.costCenter"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>e.g. "consumer products", "pulp mill"</td>                      
+                            <td>e.g. "0426", "liquor recovery"</td>
+                            <td>e.g. "seal water"</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Equipment</th>
+                        <th>Task</th>
+                        <th>Isolation Point</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control" placeholder="ALL" ng-model="vm.searchObject.equipment"></td>
+                        <td><input type="text" class="form-control" placeholder="ALL" ng-model="vm.searchObject.task"></td>
+                        <td><input type="text" class="form-control" placeholder="ALL" ng-model="vm.searchObject.isolationPoint"></td>
+                    </tr>
+                    <tr>
+                        <td>e.g. "811", "8110139", "811013900", "broke chest"</td>
+                        <td>e.g. "blade replacement"</td>
+                        <td>e.g. "SLV821", "MCC 1A1-CF2"</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="advancedSearch hide"><button><<< Advanced Search</button></td>
+                        <td class="advancedSearch"><button ng-click="vm.advancedSearch = !vm.advancedSearch">{{ vm.advancedSearch && 'Advanced Search >>>' || '<<< Advanced Search' }}</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="row center">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" ng-model="vm.searchObject.subEquipmentProcedures">
+                        Procedure for Sub-Equipment
+                    </label><br />
+                    <label>
+                        <input type="checkbox" ng-model="vm.searchObject.approvedProcedures">
+                        Approved Procedures
+                    </label>
+                    <label>
+                        <input type="checkbox" ng-model="vm.searchObject.unapprovedProcedures">
+                        Unapproved Procedures
+                    </label><br/>
+                    <label>
+                        <input type="checkbox" ng-model="vm.searchObject.approvedOver1YearAgo">
+                        Approved Over 1 Year Ago
+                    </label><br />
+                    <label>
+                        <input type="checkbox" ng-model="vm.searchObject.inspectedOver1YearAgo">
+                        Inspected Over 1 Year Ago
+                    </label>
+                    <label>
+                        <input type="checkbox" ng-model="vm.searchObject.approvalRequested">
+                        Approval Requested
+                    </label><br />
+                </div>
+            </div>
+
+            <div class="row center">
+                <div class="radio">
+                    <label>Sort by:</label>
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        Equipment
+                    </label>
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        Procedure ID
+                    </label>
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                        Inspection Date
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <p>2. Click on Search button to return procedures matching criteria.</p>
+            </div>
+
+            <div class="row center">
+                <button type="button" ng-click="vm.handleSearch()" class="btn btn-primary">Search</button>
+                <!--<button type="button" ng-click="vm.submitForm(procedureForm.$valid)" class="btn btn-primary">Search</button>-->
+                <button type="button" class="btn btn-primary" ng-print print-element-id="printThisElement">Print List</button> 
+                <button type="button" class="btn btn-primary" ng-disabled="procedureForm.$invalid">Print Procedure</button>
+            </div>
+        </div>
+    </form>
+</div>

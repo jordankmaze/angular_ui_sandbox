@@ -1,0 +1,69 @@
+﻿<style>
+* {
+  margin: 0;
+}
+
+.page {
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: #faf9f9;
+}
+
+.select {
+  margin-top: 1rem;
+  height: 3rem;
+  background-color: #fff;
+}
+
+.box {
+  width: calc(100% - 2rem);
+  height: 100%;
+  margin: 1rem;
+  background-size: cover;
+  background-position: center;
+  
+  background-color: #D3545B;
+  background-image: url('../../Assets/img/creepy.jpg');
+  background-blend-mode: overlay;
+}
+</style>
+
+<div class="container">
+    <div class="page">
+
+        <select class="select js-select">
+            <option value="normal">normal (initial value)</option>
+            <option value="multiply" selected="selected">multiply</option>
+            <option value="screen">screen</option>
+            <option value="overlay">overlay</option>
+            <option value="darken">darken</option>
+            <option value="lighten">lighten</option>
+            <option value="color-dodge">color-dodge</option>
+            <option value="color-burn">color-burn</option>
+            <option value="hard-light">hard-light</option>
+            <option value="soft-light">soft-light</option>
+            <option value="difference">difference</option>
+            <option value="exclusion">exclusion</option>
+            <option value="hue">hue</option>
+            <option value="saturation">saturation</option>
+            <option value="color">color</option>
+            <option value="luminosity">luminosity</option>
+        </select>
+
+        <div class="box js-box"></div>
+
+    </div>
+</div>
+
+<script>
+    const select = document.querySelector('.js-select');
+    const box = document.querySelector('.js-box');
+
+    select.addEventListener('change', (e) => {
+        box.style.backgroundBlendMode = e.target.value;
+    });
+</script>

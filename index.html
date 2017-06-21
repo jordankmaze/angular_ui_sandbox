@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+
+    <link href="Assets/Content/style.css" rel="stylesheet" />
+    <link href="Assets/Content/forms.css" rel="stylesheet" />
+    <!--<link href="Assets/Content/grid.css" rel="stylesheet" />-->
+    <link href="Assets/Content/ie.css" rel="stylesheet" />
+    <!--<link href="Assets/Content/reset.css" rel="stylesheet" />-->
+    <link href="Assets/Content/typography.css" rel="stylesheet" />
+
+    <link href="Assets/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Assets/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-messages.js"></script>
+    <script src="Scripts/satellizer/satellizer.js"></script>
+    <script src="Assets/Scripts/ui-router/angular-ui-router.min.js"></script>
+    <script src="Assets/Scripts/angular-animate.min.js"></script>
+    <script src="Assets/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="Assets/Scripts/bootstrap.min.js"></script>
+    <script src="Assets/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+
+    <!--Features-->
+    <script src="Action/action.feature.js"></script>
+    <script src="Carousel/carouselFeature.js"></script>
+    <script src="Home/home.feature.js"></script>
+    <script src="Datepicker/datepicker.feature.js"></script>
+    <script src="Modal/modal.feature.js"></script>
+    <script src="Pager/pager.feature.js"></script>
+    <script src="Pagination/pagination.feature.js"></script>
+    <script src="Popover/popover.feature.js"></script>
+    <script src="Progressbar/progressbar.feature.js"></script>
+    <script src="Rating/rating.feature.js"></script>
+    <script src="Tabs/tabs.feature.js"></script>
+    <script src="Timepicker/timepicker.feature.js"></script>
+    <script src="Tooltip/Tooltip.feature.js"></script>
+    <script src="Typeahead/typeahead.feature.js"></script>
+    <script src="Accordion/accordion.feature.js"></script>
+    <script src="Alert/alert.feature.js"></script>
+    <script src="Button/button.feature.js"></script>
+    <script src="Collapse/collapse.feature.js"></script>
+    <script src="Dropdown/dropdown.feature.js"></script>
+    <script src="Lightbox/lightbox.feature.js"></script>
+    <script src="FileAttachment/fileAttachment.feature.js"></script>
+    <script src="Shopping/shopping.feature.js"></script>
+    <script src="InstagramFeed/instagram.feature.js"></script>
+    <script src="Sortable/sortable.feature.js"></script>
+    <script src="BlendMode/blendmode.feature.js"></script>
+    <script src="ImageHover/imagehover.feature.js"></script>
+    <script src="RandomDate/randomdate.feature.js"></script>
+
+    <!--App-->
+    <script src="Shared/app.js"></script>
+    <script src="Shared/routing.js"></script>
+
+    <!--Components-->
+    <script src="Carousel/carousel-view/carouselView.component.js"></script>
+    <script src="Action/action-view/actionView.component.js"></script>
+    <script src="Home/home-view/homeView.component.js"></script>
+    <script src="Datepicker/date-picker-view/datepickerView.component.js"></script>
+    <script src="Modal/modal-view/modalView.component.js"></script>
+    <script src="Shared/modal/modalwindow.component.js"></script>
+    <script src="Shared/modal/modalDoubleWindow.component.js"></script>
+    <script src="Pager/pager-view/pagerView.component.js"></script>
+    <script src="Pagination/pagination-view/paginationView.component.js"></script>
+    <script src="Popover/popover-view/popoverView.component.js"></script>
+    <script src="Progressbar/Progressbar-view/progressbarView.component.js"></script>
+    <script src="Rating/Rating-view/ratingView.component.js"></script>
+    <script src="Tabs/Tabs-view/tabsView.component.js"></script>
+    <script src="Timepicker/Timepicker-view/timepickerView.component.js"></script>
+    <script src="Tooltip/Tooltip-view/tooltipView.component.js"></script>
+    <script src="Typeahead/Typeahead-view/typeaheadView.component.js"></script>
+    <script src="Accordion/Accordion-view/accordionView.component.js"></script>
+    <script src="Alert/Alert-view/alertView.component.js"></script>
+    <script src="Button/Button-view/buttonView.component.js"></script>
+    <script src="Collapse/Collapse-view/collapseView.component.js"></script>
+    <script src="Dropdown/Dropdown-view/dropdownView.component.js"></script>
+    <script src="Lightbox/lightbox-view/lightboxView.component.js"></script>
+    <script src="Shared/modal/lightboxWindow.component.js"></script>
+    <script src="Shared/directives/fileAttachment/fileAttachment.component.js"></script>
+    <script src="FileAttachment/file-attachment-view/fileAttachmentView.component.js"></script>
+    <script src="Shopping/Shopping-view/shoppingView.component.js"></script>
+    <script src="Sortable/sortable-view/sortableView.component.js"></script>
+    <script src="BlendMode/blendmode-view/blendmodeView.component.js"></script>
+    <script src="InstagramFeed/instagram-view/instagramView.component.js"></script>
+    <script src="InstagramFeed/instagram-detail/instagramDetail.component.js"></script>
+    <script src="InstagramFeed/instagram-login/instagramLogin.component.js"></script>
+    <script src="InstagramFeed/instagram-photo/instagramPhoto.component.js"></script>
+    <script src="InstagramFeed/instagram-signup/instagramSignup.component.js"></script>
+    <script src="ImageHover/imagehover-view/imageHoverView.component.js"></script>
+    <script src="RandomDate/randomdate-view/randomDateView.component.js"></script>
+
+    <!--Directives-->
+    <script src="Shared/directives/fileAttachment/fileAttachment.directive.js"></script>
+    <!--Factory-->
+    <script src="Shared/directives/fileAttachment/fileAttachment.service.js"></script>
+
+    <title>Angular Testing Ground</title>
+	<meta charset="utf-8" />
+</head>
+
+<body ng-app="app">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--<a class="navbar-brand" href="#">Bootstrap theme</a>-->
+            </div>
+            <!--<div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a ui-sref="home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Directives <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a ui-sref="action">Action</a></li>
+                            <li><a ui-sref="alert">Alert</a></li>
+                            <li><a ui-sref="accordion">Accordion</a></li>
+                            <li><a ui-sref="button">Button</a></li>
+                            <li><a ui-sref="collapse">Collapse</a></li>
+                            <li><a ui-sref="carousel">Carousel</a></li>
+                            <li><a ui-sref="datepicker">Datepicker</a></li>
+                            <li><a ui-sref="dropdown">Dropdown</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">More Directives</li>
+                            <li><a ui-sref="modal">Modal</a></li>
+                            <li><a ui-sref="pager">Pager</a></li>
+                            <li><a ui-sref="pagination">Pagination</a></li>
+                            <li><a ui-sref="popover">Popover</a></li>
+                            <li><a ui-sref="progressbar">Progressbar</a></li>
+                            <li><a ui-sref="rating">Rating</a></li>
+                            <li><a ui-sref="tabs">Tabs</a></li>
+                            <li><a ui-sref="timepicker">Timepicker</a></li>
+                            <li><a ui-sref="tooltip">Tooltip</a></li>
+                            <li><a ui-sref="typeahead">Typeahead</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>--><!--/.nav-collapse -->
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a ui-sref="home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li uib-dropdown dropdown-append-to-body>
+                        <a id="btn-append-to-body" uib-dropdown-toggle>Instagram<span class="caret"></span></a>
+                        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-body">
+                            <li><a ui-sref="instagramhome">Home</a></li>
+                            <li><a ui-sref="instagramsignup">Sign Up</a></li>
+                            <li><a ui-sref="instagramlogin">Login</a></li>
+                            <li><a ui-sref="instagramphoto">Photo</a></li>
+                        </ul>
+                    </li>
+                    <li uib-dropdown dropdown-append-to-body>
+                        <a id="btn-append-to-body"uib-dropdown-toggle>Directives<span class="caret"></span></a>
+                        <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-body">
+                            <li><a ui-sref="action">Action</a></li>
+                            <li><a ui-sref="alert">Alert</a></li>
+                            <li><a ui-sref="accordion">Accordion</a></li>
+                            <li><a ui-sref="button">Button</a></li>
+                            <li><a ui-sref="collapse">Collapse</a></li>
+                            <li><a ui-sref="carousel">Carousel</a></li>
+                            <li><a ui-sref="datepicker">Datepicker</a></li>
+                            <li><a ui-sref="dropdown">Dropdown</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">More Directives</li>
+                            <li><a ui-sref="modal">Modal</a></li>
+                            <li><a ui-sref="pager">Pager</a></li>
+                            <li><a ui-sref="pagination">Pagination</a></li>
+                            <li><a ui-sref="popover">Popover</a></li>
+                            <li><a ui-sref="progressbar">Progressbar</a></li>
+                            <li><a ui-sref="rating">Rating</a></li>
+                            <li><a ui-sref="tabs">Tabs</a></li>
+                            <li><a ui-sref="timepicker">Timepicker</a></li>
+                            <li><a ui-sref="tooltip">Tooltip</a></li>
+                            <li><a ui-sref="typeahead">Typeahead</a></li>
+                            <li><a ui-sref="lightbox">Lightbox</a></li>
+                            <li><a ui-sref="fileattachment">File Attachment</a></li>
+                            <li><a ui-sref="shopping">Shopping</a></li>
+                            <li><a ui-sref="instagram">Instagram</a></li>
+                            <li><a ui-sref="sortable">Sortable</a></li>
+                            <li><a ui-sref="blendmode">Blend Mode</a></li>
+                            <li><a ui-sref="imagehover">Image Hover</a></li>
+                            <li><a ui-sref="randomdate">Random Date Picker</a></li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    
+        <div ui-view class="page {{ pageClass }}"></div> <!-- /container -->
+
+</body>
+</html>

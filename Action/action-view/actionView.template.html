@@ -1,0 +1,63 @@
+﻿<div class="container theme-showcase">
+    <h4>use $index </h4>
+    <div ng-repeat="item in 'somewords'.split('') track by $index">
+        {{$index + 1}}. {{item}}
+    </div>
+    <hr />
+    <div class="button"
+         ng-repeat="item in 'somewords'.split('') track by $index"
+         ng-click="ev = $event">
+        {{$index + 1}}. {{item}}
+        {{ev.pageX}}
+    </div>
+    <hr />
+    <div>
+        <div class="button"
+             ng-repeat="item in 'somewords'.split('') track by $index"
+             ng-click="vm.$log.debug($event)">
+            {{$index + 1}}. {{item}}
+            {{ev.pageX}}
+        </div>
+    </div>
+    <hr />
+    <div>
+        <h4>$log information or message in the console</h4>
+      <label>Message:
+      <input type="text" ng-model="vm.message" /></label>
+      <button ng-click="vm.$log.log($event)">log</button>
+      <button ng-click="vm.$log.warn(vm.message)">warn</button>
+      <button ng-click="vm.$log.info($event)">info</button>
+      <button ng-click="vm.$log.error(vm.message)">error</button>
+      <button ng-click="vm.$log.debug($event)">debug</button>
+    </div>
+    <hr />
+    <div>
+        <h4>use ng-hide</h4>
+        <button ng-click="vm.hide()">Hide element</button>
+        <p ng-hide="vm.isHide">Hello World!</p>
+    </div>
+    <hr />
+    <div>
+        <h4>type an email and console.log runs</h4>
+        <label>Email:<input type="text" ng-model="vm.email" /></label>
+    </div>
+    <hr />
+    <div>
+        <h4>checkbox diable with no component code</h4>
+        <label><input type="checkbox" ng-model="checked" />Disable Button</label>
+        <button ng-disabled="checked">Select me</button>
+    </div>
+    <hr />
+    <div>
+        <h4>directive that shows customer information</h4>
+        <action-view-directive customer="vm.naomi"></action-view-directive>
+        <action-view-directive customer="vm.igor"></action-view-directive>
+    </div>
+    <hr />
+    <div>
+        <h4>one time binding vs normal binding</h4>
+        <button ng-click="vm.clickMe($event)">Click Me</button>
+        <p id="one-time-binding-example">One time binding: {{::vm.name}}</p>
+        <p id="normal-binding-example">Normal binding: {{vm.name}}</p>
+    </div>
+</div>

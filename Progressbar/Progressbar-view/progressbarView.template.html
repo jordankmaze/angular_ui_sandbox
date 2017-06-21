@@ -1,0 +1,22 @@
+﻿<div>
+    <h3>Static</h3>
+    <div class="row">
+        <div class="col-sm-4"><uib-progressbar value="55"></uib-progressbar></div>
+        <div class="col-sm-4"><uib-progressbar class="progress-striped" value="22" type="warning">22%</uib-progressbar></div>
+        <div class="col-sm-4"><uib-progressbar class="progress-striped active" max="200" value="166" type="danger"><i>166 / 200</i></uib-progressbar></div>
+    </div>
+
+    <hr />
+    <h3>Dynamic <button type="button" class="btn btn-sm btn-primary" ng-click="vm.random()">Randomize</button></h3>
+    <uib-progressbar max="max" value="vm.dynamic"><span style="color:white; white-space:nowrap;">{{vm.dynamic}} / {{vm.max}}</span></uib-progressbar>
+
+    <small><em>No animation</em></small>
+    <uib-progressbar animate="false" value="vm.dynamic" type="success"><b>{{vm.dynamic}}%</b></uib-progressbar>
+
+    <small><em>Object (changes type based on value)</em></small>
+    <uib-progressbar class="progress-striped active" value="vm.dynamic" type="{{vm.type}}">{{vm.type}} <i ng-show="vm.showWarning">!!! Watch out !!!</i></uib-progressbar>
+
+    <hr />
+    <h3>Stacked <button type="button" class="btn btn-sm btn-primary" ng-click="vm.randomStacked()">Randomize</button></h3>
+    <uib-progress><uib-bar ng-repeat="bar in vm.stacked track by $index" value="bar.value" type="{{bar.type}}"><span ng-hide="bar.value < 5">{{bar.value}}%</span></uib-bar></uib-progress>
+</div>

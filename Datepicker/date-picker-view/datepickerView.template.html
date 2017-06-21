@@ -1,0 +1,58 @@
+﻿<div>
+    <div>
+        <pre>Selected date is: <em>{{vm.dt | date:'fullDate' }}</em></pre>
+        <h4>Formatting codes playground</h4>
+        <p class="form-group">
+            <label>Define your format</label>
+            <input type="text" ng-model="vm.format" class="form-control">
+        </p>
+        <p class="form-group">
+            <label>Result</label>
+            <input type="text" class="form-control" uib-datepicker-popup="{{vm.format}}" ng-model="vm.dt" />
+        </p>
+    </div>
+
+    <div>
+        <h4>Inline</h4>
+        <div style="display:inline-block; min-height:290px;">
+            <div uib-datepicker ng-model="vm.dt" class="well well-sm" datepicker-options="options"></div>
+        </div>
+
+        <hr />
+        <button type="button" class="btn btn-sm btn-info" ng-click="vm.today()">Today</button>
+        <button type="button" class="btn btn-sm btn-default" ng-click="vm.setDate(2009, 7, 24)">2009-08-24</button>
+        <button type="button" class="btn btn-sm btn-danger" ng-click="vm.clear()">Clear</button>
+        <button type="button" class="btn btn-sm btn-default" ng-click="vm.toggleMin()" uib-tooltip="After today restriction">Min date</button>
+        <hr />
+    </div>
+
+    <div>
+        <h4>Popup</h4>
+        <div class="row">
+            <div class="col-md-6">
+                <p class="input-group">
+                    <input type="text" class="form-control" uib-datepicker-popup="{{vm.format}}" ng-model="vm.dt" is-open="vm.popup1.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" alt-input-formats="altInputFormats" />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.open1()"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <p class="input-group">
+                    <input type="text" class="form-control" uib-datepicker-popup ng-model="vm.dt" is-open="vm.popup2.opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.open2()"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label>Format: <span class="muted-text">(manual alternate <em>{{vm.altInputFormats[0]}}</em>)</span></label> <select class="form-control" ng-model="vm.format" ng-options="f for f in vm.formats"><option></option></select>
+            </div>
+        </div>
+
+        <hr />
+    </div>
+</div>

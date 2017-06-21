@@ -1,0 +1,23 @@
+﻿<div>
+    <h4>Default</h4>
+    <ul uib-pagination total-items="vm.totalItems" ng-model="vm.currentPage" ng-change="vm.pageChanged()"></ul>
+    <ul uib-pagination boundary-links="true" total-items="vm.totalItems" ng-model="vm.currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"></ul>
+    <ul uib-pagination direction-links="false" boundary-links="true" total-items="vm.totalItems" ng-model="vm.currentPage"></ul>
+    <ul uib-pagination direction-links="false" total-items="vm.totalItems" ng-model="vm.currentPage" num-pages="vm.smallnumPages"></ul>
+    <pre>The selected page no: {{vm.currentPage}}</pre>
+    <button type="button" class="btn btn-info" ng-click="vm.setPage(3)">Set current page to: 3</button>
+
+    <hr />
+    <h4>Limit the maximum visible buttons</h4>
+    <h6><code>rotate</code> defaulted to <code>true</code>:</h6>
+    <ul uib-pagination total-items="vm.bigTotalItems" ng-model="vm.bigCurrentPage" max-size="vm.maxSize" class="pagination-sm" boundary-links="true" num-pages="vm.numPages"></ul>
+    <h6><code>rotate</code> defaulted to <code>true</code> and <code>force-ellipses</code> set to <code>true</code>:</h6>
+    <ul uib-pagination total-items="vm.bigTotalItems" ng-model="vm.bigCurrentPage" max-size="vm.maxSize" class="pagination-sm" boundary-links="true" force-ellipses="true"></ul>
+    <h6><code>rotate</code> set to <code>false</code>:</h6>
+    <ul uib-pagination total-items="vm.bigTotalItems" ng-model="vm.bigCurrentPage" max-size="vm.maxSize" class="pagination-sm" boundary-links="true" rotate="false"></ul>
+    <h6><code>boundary-link-numbers</code> set to <code>true</code> and <code>rotate</code> defaulted to <code>true</code>:</h6>
+    <ul uib-pagination total-items="vm.bigTotalItems" ng-model="vm.bigCurrentPage" max-size="vm.maxSize" class="pagination-sm" boundary-link-numbers="true"></ul>
+    <h6><code>boundary-link-numbers</code> set to <code>true</code> and <code>rotate</code> set to <code>false</code>:</h6>
+    <ul uib-pagination total-items="vm.bigTotalItems" ng-model="vm.bigCurrentPage" max-size="vm.maxSize" class="pagination-sm" boundary-link-numbers="true" rotate="false"></ul>
+    <pre>Page: {{vm.bigCurrentPage}} / {{vm.numPages}}</pre>
+</div>

@@ -1,0 +1,9 @@
+﻿<div>
+    <div class="modal-demo">
+        <div class="col-md-3" ng-repeat="slide in vm.slides">
+            <div ng-click="vm.open(slide)" ng-model="slide">
+                <img ng-src="{{slide.image}}" style="width:100%;">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+﻿<div class="container">
+    <h1> sortable</h1>
+
+    <table id="procedureGrid" class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th ng-click="vm.changeOrder('name'); vm.reverse=!vm.reverse">Name <span ng-class="vm.reverse ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'" class="glyphicon" aria-hidden="true"></span></th>
+                <th ng-click="vm.changeOrder('balance'); vm.reverse=!vm.reverse">Balance <span ng-class="vm.reverse ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'" class="glyphicon" aria-hidden="true"></span></th>
+                <th ng-click="vm.changeOrder('address'); vm.reverse=!vm.reverse">Address <span ng-class="vm.reverse ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'" class="glyphicon" aria-hidden="true"></span></th>
+                <th ng-click="vm.changeOrder('phone'); vm.reverse=!vm.reverse">Phone <span ng-class="vm.reverse ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'" class="glyphicon" aria-hidden="true"></span></th>
+                <th ng-click="vm.changeOrder('age'); vm.reverse=!vm.reverse">Age <span ng-class="vm.reverse ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'" class="glyphicon" aria-hidden="true"></span></th>
+                <th ng-click="vm.changeOrder('email'); vm.reverse=!vm.reverse">Email <span ng-class="vm.reverse ? 'glyphicon-chevron-up' : 'glyphicon-chevron-down'" class="glyphicon" aria-hidden="true"></span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in vm.items | orderBy: vm.order : vm.reverse track by $index">
+                <td>{{item.name}}</td>
+                <td>{{item.balance}}</td>
+                <td>{{item.address}}</td>               
+                <td>{{item.phone}}</td>
+                <td>{{item.age}}</td>
+                <td>{{item.email}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button ng-click="vm.changeFilter()">Change Filter</button>
+</div>

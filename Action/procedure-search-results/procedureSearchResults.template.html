@@ -1,0 +1,28 @@
+﻿<div class="col-md-2">
+</div>
+<div class="col-md-10">
+    <div class="row">
+        <div id="printThisElement" class="row procedureGridTbl" ng-show="vm.showGrid">
+            <table id="procedureGrid" class="table table-bordered table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>Procedure</th>
+                        <th>Procedure type</th>
+                        <th>Equipment</th>
+                        <th>Task</th>
+                        <th>Inspection Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="procedure in vm.items" context-menu="vm.menuOptions">
+                    <td>{{ procedure.procedureId }}</td>
+                    <td>{{ procedure.procedureType }}</td>
+                    <td>{{ procedure.equipmentNumber + " / " + procedure.equipmentDescription }}</td>
+                    <td>{{ procedure.task }}</td>
+                    <td ng-bind="procedure.inspectionDate | date:'MM/dd/yyyy'"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

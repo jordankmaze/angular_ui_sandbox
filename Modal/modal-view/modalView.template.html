@@ -1,0 +1,20 @@
+﻿<div>
+    <div class="modal-demo">
+        <button type="button" class="btn btn-default" ng-click="vm.open()">Open me!</button>
+        <button type="button" class="btn btn-default" ng-click="vm.open('lg')">Large modal</button>
+        <button type="button" class="btn btn-default" ng-click="vm.open('sm')">Small modal</button>
+        <button type="button"
+                class="btn btn-default"
+                ng-click="vm.open('sm', '.modal-parent')">
+            Modal appended to a custom parent
+        </button>
+        <button type="button" class="btn btn-default" ng-click="vm.toggleAnimation()">Toggle Animation ({{ vm.animationsEnabled }})</button>
+        <button type="button" class="btn btn-default" ng-click="vm.openComponentModal()">Open a component modal!</button>
+        <button type="button" class="btn btn-default" ng-click="vm.openMultipleModals()">
+            Open multiple modals at once
+        </button>
+        <div ng-show="vm.selected">Selection from a modal: {{ vm.selected }}</div>
+        <div class="modal-parent">
+        </div>
+    </div>
+</div>

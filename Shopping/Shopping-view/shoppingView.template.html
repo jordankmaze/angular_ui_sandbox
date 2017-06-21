@@ -1,0 +1,52 @@
+﻿<div class="container">
+    <div class="sitenavigations">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input class="form-control" type="text">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default calendar-btn glyphicon glyphicon-search"></button>
+                        </span>
+                    </div>
+                </div>
+                <!--<div class="input-group">
+                    <span class="input-group-addon glyphicon glyphicon-search" id="basic-addon1"></span>
+                    <input type="text" class="form-control">
+                </div>-->
+            </div>
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-default pull-right">
+                    <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3" ng-repeat="slide in vm.slides">
+                <div ng-click="vm.open(slide)" ng-model="slide">
+                    <img class="sitenavigations" ng-src="{{slide.image}}" style="width:100%;">
+                </div>
+                <div class="row col-md-offset-1">
+                    <div class="col-md-6">
+                        <span uib-rating ng-model="vm.rate" max="vm.max" read-only="vm.isReadonly" on-hover="vm.hoveringOver(value)" on-leave="vm.overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-primary btn-xs" ng-model="vm.singleModel" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
+                            View
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-4">
+                <ul uib-pagination total-items="vm.totalItems" ng-model="vm.currentPage" ng-change="vm.pageChanged()"></ul>
+            </div>
+        </div>
+    </div>
+</div>
